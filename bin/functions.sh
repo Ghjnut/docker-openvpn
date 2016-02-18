@@ -11,7 +11,7 @@ generate_config() {
 		--rm \
 		"$OVPN_SERVER_IMAGE" \
 		ovpn_genconfig \
-		--user udp://"$OVPN_DOMAIN"
+		-u udp://"$OVPN_DOMAIN"
 
 	docker run --volumes-from "$OVPN_DATA_CONTAINER" \
 		--rm --interactive --tty \
